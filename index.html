@@ -14,8 +14,8 @@
       width: 50%;
       height: 50%;
   }
-  .buttonSignin{
-  background-color: #9068e2; /* purple */
+  .buttonPurple{
+  background-color: #9068e2; 
   border: none;
   color: white;
   padding: 15px;
@@ -23,15 +23,46 @@
   padding-right: 60px;
   text-align: center;
   font-size: 16px;
-  margin: 4px 2px;
-  max-width: 230px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 200px;
+  height: 55px;
   border-radius: 40px;
+}
+.buttonWhite{
+  background-color: #ffffff; 
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  font-size: 16px;
+  margin-right: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 200px;
+  height: 55px;
+  border-radius: 40px;
+  box-shadow: .5px .5px 2px 2px #888888;
+}
+.contactNsupport{
+  background-color:rgba(190, 190, 190, 0.925);
+  position:absolute;
+   bottom:0;
+   width:100%;
+   text-align:center
 }
   </style>
 </head>
 <body>
-  
-  <button class="buttonSignin">SIGN IN</button>
-  <button class="buttonSignin">CALCULATE BENEFITS</button>
+  <div class="row">
+    <button class="buttonPurple">SIGN IN</button>
+    <button class="buttonWhite">CALCULATE BENEFITS</button>  
+  </div>
+  <div class="contactNsupport" >
+    <i>Contact and support</i>
+  </div>
 </body>
 </html>
