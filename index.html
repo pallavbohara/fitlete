@@ -7,17 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <style>
-    /* Make the image fully responsive */
-
-    .carousel-inner img {
-      width: 50%;
-      height: 50%;
-    }
-
     .buttonPurple:active {
       background-color: #9068e2;
       border: none;
@@ -33,7 +26,11 @@
       width: 200px;
       height: 55px;
       border-radius: 40px;
-      font-family: 'Roboto'
+      font-family: 'Montserrat'
+    }
+
+    .tab button:hover {
+      background-color: #9068e2;
     }
 
     .buttonPurple {
@@ -52,7 +49,7 @@
       height: 55px;
       border-radius: 40px;
       box-shadow: .5px .5px 2px 2px #888888;
-      font-family: 'Roboto'
+      font-family: 'Montserrat'
     }
 
     .buttonWhite {
@@ -71,7 +68,7 @@
       height: 55px;
       border-radius: 40px;
       box-shadow: .5px .5px 2px 2px #888888;
-      font-family: 'Roboto'
+      font-family: 'Montserrat'
     }
 
     .buttonWhite:active {
@@ -90,7 +87,7 @@
       height: 55px;
       border-radius: 40px;
       box-shadow: .5px .5px 2px 2px #888888;
-      font-family: 'Roboto'
+      font-family: 'Montserrat'
     }
 
     .contactNsupport {
@@ -99,7 +96,8 @@
       bottom: 0;
       width: 100%;
       text-align: center;
-      font-family: 'Roboto'
+      font-family: 'Montserrat';
+      display: flow-root;
     }
 
     .inputStyle {
@@ -110,55 +108,90 @@
       margin-bottom: 5px;
       background: #f0f0f0;
       width: 170px;
-      font-family: 'Roboto'
+      font-family: 'Montserrat'
     }
+    /* Style the tab content */
+.tabcontent {
+  display: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+    /* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
-    * {
-      font-family: 'Roboto'
-    }
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
   </style>
 </head>
 
 <body>
-  <div class="row">
-    <button class="buttonPurple active">SIGN IN</button>
-    <button class="buttonWhite">CALCULATE BENEFITS</button>
+  <div class="tab row">
+    <button onclick="openTab(event, 'SignUpTab')" class="buttonPurple active tablinks">SIGN IN</button>
+    <button onclick="openTab(event, 'CalculateBenefitTab')" class="buttonWhite tablinks">CALCULATE BENEFITS</button>
   </div>
-  <h3 style="color: #5e62e7;font-family: 'Roboto'">SIGN IN</h3>
-  <form action="/action_page.php">
-    <input type="text" class="inputStyle" placeholder="First Name">
-    <input class="inputStyle" type="text" placeholder="Last Name">
-    <br>
-    <input type="text" class="inputStyle" placeholder="Email Id">
-    <input class="inputStyle" type="text" placeholder="Phone Number">
-    <br>
-    <input type="text" class="inputStyle" placeholder="Age">
-    <input class="inputStyle" type="text" placeholder="Gender">
-    <br>
-    <select name="city" class="inputStyle" placeholder="City">
-      <option value="" disabled selected>City</option>
-      <option value="mumbai">Mumbai</option>
-      <option value="Delhi">Delhi</option>
-      <option value="Kolkata">Kolkata</option>
-      <option value="Jaipur">Jaipur</option>
-    </select>
-    <select name="state" class="inputStyle" type="text" placeholder="State">
-      <option value="" disabled selected>State</option>
-      <option value="volvo">Rajasthan</option>
-      <option value="saab">Maharashtra</option>
-      <option value="fiat">West Bengal</option>
-      <option value="audi">Indian Union Territory</option>
-    </select>
-    <br>
-    <input type="password" class="inputStyle" placeholder="Password">
-    <input class="inputStyle" type="password" placeholder="Confirm Password">
-    <br>
+  <!-- Tab content -->
 
-    <input type="submit" value="SIGN IN" class="buttonPurple">
-  </form>
-  <div class="contactNsupport">
-    <i>Contact and support</i>
+  <div id="SignUpTab" class="tabcontent">
+    <h3 style="color: #5e62e7;font-family: 'Montserrat'">SIGN IN</h3>
+    <form>
+      <input type="text" class="inputStyle" placeholder="First Name">
+      <input class="inputStyle" type="text" placeholder="Last Name">
+      <br>
+      <input type="text" class="inputStyle" placeholder="Email Id">
+      <input class="inputStyle" type="text" placeholder="Phone Number">
+      <br>
+      <input type="text" class="inputStyle" placeholder="Age">
+      <input class="inputStyle" type="text" placeholder="Gender">
+      <br>
+      <select name="city" class="inputStyle" placeholder="City">
+        <option value="" disabled selected>City</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Jaipur">Jaipur</option>
+      </select>
+      <select name="state" class="inputStyle" type="text" placeholder="State">
+        <option value="" disabled selected>State</option>
+        <option value="volvo">Rajasthan</option>
+        <option value="saab">Maharashtra</option>
+        <option value="fiat">West Bengal</option>
+        <option value="audi">Indian Union Territory</option>
+      </select>
+      <br>
+      <input type="password" class="inputStyle" placeholder="Password">
+      <input class="inputStyle" type="password" placeholder="Confirm Password">
+      <br>
+
+      <input type="submit" value="SIGN IN" class="buttonPurple">
+    </form>
   </div>
+  <div id="CalculateBenefitTab" class="tabcontent">
+    In progress...
+  </div>
+
+  <!-- <div class="contactNsupport">
+    <i>Contact and support</i>
+  </div> -->
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks")
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
 </body>
 
 </html>
