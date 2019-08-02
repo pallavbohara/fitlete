@@ -108,24 +108,50 @@
       margin-bottom: 5px;
       background: #f0f0f0;
       width: 170px;
-      font-family: 'Montserrat'
+      font-family: 'Montserrat';
     }
-    /* Style the tab content */
-.tabcontent {
-  display: none;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
-}
-    /* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
 
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+    /* Style the tab content */
+
+    .tabcontent {
+      display: none;
+      -webkit-animation: fadeEffect 1s;
+      animation: fadeEffect 1s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+      outline: none;
+    }
+
+    /* Fade in tabs */
+
+    @-webkit-keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    #centerwrapper {
+      background-color: rgba(255, 0, 0, 0);
+      /* for visualization purposes */
+      text-align: center;
+    }
+
   </style>
 </head>
 
@@ -137,41 +163,48 @@
   <!-- Tab content -->
 
   <div id="SignUpTab" class="tabcontent">
-    <h3 style="color: #5e62e7;font-family: 'Montserrat'">SIGN IN</h3>
-    <form>
-      <input type="text" class="inputStyle" placeholder="First Name">
-      <input class="inputStyle" type="text" placeholder="Last Name">
-      <br>
-      <input type="text" class="inputStyle" placeholder="Email Id">
-      <input class="inputStyle" type="text" placeholder="Phone Number">
-      <br>
-      <input type="text" class="inputStyle" placeholder="Age">
-      <input class="inputStyle" type="text" placeholder="Gender">
-      <br>
-      <select name="city" class="inputStyle" placeholder="City">
-        <option value="" disabled selected>City</option>
-        <option value="mumbai">Mumbai</option>
-        <option value="Delhi">Delhi</option>
-        <option value="Kolkata">Kolkata</option>
-        <option value="Jaipur">Jaipur</option>
-      </select>
-      <select name="state" class="inputStyle" type="text" placeholder="State">
-        <option value="" disabled selected>State</option>
-        <option value="volvo">Rajasthan</option>
-        <option value="saab">Maharashtra</option>
-        <option value="fiat">West Bengal</option>
-        <option value="audi">Indian Union Territory</option>
-      </select>
-      <br>
-      <input type="password" class="inputStyle" placeholder="Password">
-      <input class="inputStyle" type="password" placeholder="Confirm Password">
-      <br>
+    <div id="centerwrapper">
 
-      <input type="submit" value="SIGN IN" class="buttonPurple">
-    </form>
+      <h3  style="color: #5e62e7;font-family: 'Montserrat'; margin: 20px 20px">SIGN IN</h3>
+
+
+      <form>
+        <input type="text" class="inputStyle" placeholder="First Name">
+        <input class="inputStyle" type="text" placeholder="Last Name">
+        <br>
+        <input type="text" class="inputStyle" placeholder="Email Id">
+        <input class="inputStyle" type="text" placeholder="Phone Number">
+        <br>
+        <input type="text" class="inputStyle" placeholder="Age">
+        <input class="inputStyle" type="text" placeholder="Gender">
+        <br>
+        <select name="city" class="inputStyle" placeholder="City">
+          <option value="" disabled selected>City</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Jaipur">Jaipur</option>
+        </select>
+        <select name="state" class="inputStyle" type="text" placeholder="State">
+          <option value="" disabled selected>State</option>
+          <option value="volvo">Rajasthan</option>
+          <option value="saab">Maharashtra</option>
+          <option value="fiat">West Bengal</option>
+          <option value="audi">Indian Union Territory</option>
+        </select>
+        <br>
+        <input type="password" class="inputStyle" placeholder="Password">
+        <input class="inputStyle" type="password" placeholder="Confirm Password">
+        <br>
+
+        <input type="submit" value="SIGN IN" class="buttonPurple">
+      </form>
+    </div>
   </div>
   <div id="CalculateBenefitTab" class="tabcontent">
-    In progress...
+      <div id="centerwrapper">
+          In progress...
+      </div> 
   </div>
 
   <!-- <div class="contactNsupport">
