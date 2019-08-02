@@ -4,17 +4,17 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
   <style>
   /* Make the image fully responsive */
   .carousel-inner img {
       width: 50%;
       height: 50%;
   }
-  .buttonPurple{
+  .buttonPurple:active {
   background-color: #9068e2; 
   border: none;
   color: white;
@@ -30,7 +30,7 @@
   height: 55px;
   border-radius: 40px;
 }
-.buttonPurple:focus{
+.buttonPurple{
   background-color: #ffffff; 
   border: none;
   color: rgb(0, 0, 0);
@@ -64,7 +64,7 @@
   border-radius: 40px;
   box-shadow: .5px .5px 2px 2px #888888;
 }
-.buttonWhite:focus{
+.buttonWhite:active {
   background-color: #9068e2; 
   border: none;
   color: white;
@@ -88,13 +88,30 @@
    width:100%;
    text-align:center
 }
+.inputStyle{
+  border-radius: 30px;
+  border-color: rgba(80, 80, 80, 0.212);
+  padding: 10px 20px 10px 20px;
+  font-size: 12px;
+  margin-bottom: 5px; 
+  background: #f0f0f0
+}
   </style>
 </head>
 <body>
   <div class="row">
-    <button class="buttonPurple">SIGN IN</button>
+    <button class="buttonPurple active">SIGN IN</button>
     <button class="buttonWhite">CALCULATE BENEFITS</button>  
   </div>
+  <form action="/action_page.php">
+    <input type="text" class="inputStyle" placeholder="First Name" name="fname"> <input class="inputStyle" type="text" placeholder="Last Name" name="lname"><br>
+    <input type="text" class="inputStyle" placeholder="Email Id" name="fname"> <input class="inputStyle" type="text" placeholder="Phone Number" name="lname"><br>
+    <input type="text" class="inputStyle" placeholder="Age" name="fname"> <input class="inputStyle" type="text" placeholder="Gender" name="lname"><br>
+    <input type="text" class="inputStyle" placeholder="City" name="fname"> <input class="inputStyle" type="text" placeholder="State" name="lname"><br>
+    <input type="password" class="inputStyle" placeholder="Password" name="fname"> <input class="inputStyle" type="password" placeholder="Confirm Password" name="lname"><br>
+    
+    <input type="submit" value="SIGN IN" class="buttonPurple">
+  </form> 
   <div class="contactNsupport" >
     <i>Contact and support</i>
   </div>
