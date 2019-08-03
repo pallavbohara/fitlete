@@ -11,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
 
 <body style="background: var(--primaryColorThree)">
@@ -39,7 +39,7 @@
     </div>
   </div>
   <!-- Tab content -->
-  <div id="SignUpTab" class="tabcontent" >
+  <div id="SignUpTab" class="tabcontent">
     <div id="centerwrapper" style="min-height: var(--minTabContentHeight)">
 
       <h3 class="btnSecondHead"><u>SIGN IN</u></h3>
@@ -60,7 +60,7 @@
           <option value="Delhi">Delhi</option>
           <option value="Kolkata">Kolkata</option>
           <option value="Jaipur">Jaipur</option>
-        </select> 
+        </select>
         <select name="state" class="inputStyle" type="text" placeholder="State">
           <option value="" disabled selected>State</option>
           <option value="volvo">Rajasthan</option>
@@ -69,8 +69,15 @@
           <option value="audi">Indian Union Territory</option>
         </select>
         <br>
-        <input type="password" class="inputStyle" placeholder="Password">
-        <input class="inputStyle" type="password" placeholder="Confirm Password">
+        <div class="input-container inputStyle">
+          <input type="password" id="password" style="border: #5e63e700;width: 130px;" placeholder="Password">
+          <a onclick='show_hide_password_1(event)' class="fa fa-eye icon"></a>
+        </div>
+        <div class="input-container inputStyle">
+          <input type="password" id="cpassword" style="border: #5e63e700;width: 130px;" placeholder="Confirm Password">
+          <a onclick='show_hide_password_2(event)' class="fa fa-eye icon"></a>
+        </div>
+
         <br>
 
         <input type="submit" value="SIGN IN" class="buttonSubmitSignIn">
@@ -78,7 +85,7 @@
     </div>
   </div>
   <div id="CalculateBenefitTab" class="tabcontent">
-    <div id="centerwrapper"  style="min-height: var(--minTabContentHeight);">
+    <div id="centerwrapper" style="min-height: var(--minTabContentHeight);">
       <h4 class="btnSecondHead"><u>CALCULATE BENEFITS</u></h4>
     </div>
   </div>
@@ -102,9 +109,39 @@
     }
   </script>
   <script>
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-      </script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+  <script>
+    function show_hide_password_1(evt) {
+
+
+      var is_show_password = evt.currentTarget.className == "fa fa-eye icon";
+      if (is_show_password) {
+        document.getElementById("password").setAttribute('type', 'text');
+        evt.currentTarget.className = "fa fa-eye-slash icon";
+      }
+      else {
+        document.getElementById("password").setAttribute('type', 'password');
+        evt.currentTarget.className = "fa fa-eye icon";
+      }
+
+    }
+    function show_hide_password_2(evt) {
+
+      // document.getElementById("password").rep
+      var is_show_password = evt.currentTarget.className == "fa fa-eye icon";
+      if (is_show_password) {
+        document.getElementById("cpassword").setAttribute('type', 'text');
+        evt.currentTarget.className = "fa fa-eye-slash icon";
+      }
+      else {
+        document.getElementById("cpassword").setAttribute('type', 'password');
+        evt.currentTarget.className = "fa fa-eye icon";
+      }
+
+    }
+  </script>
 </body>
 
 </html>

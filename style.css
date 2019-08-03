@@ -1,6 +1,6 @@
 
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
-
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 :root {
     --primaryColorOne: #9068e2;
     --primaryColorTwo: #9068e2;
@@ -178,3 +178,17 @@
     /* for visualization purposes */
     text-align: center;
   }
+
+
+
+  /* Style the form icons */
+.icon {
+  color: rgb(51, 48, 48);
+  margin: 5px 0px 0px 0px;
+}
+
+/* Style the input container */
+.input-container {
+  display: inline-flex;
+  margin: 0px 0px 0px 0px;
+}
