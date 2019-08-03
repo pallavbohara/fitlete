@@ -11,26 +11,34 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <style>
+    :root {
+      --primaryColorOne: #9068e2;
+      --stdOneBtnFontSize: 15px;
+      --stdOneBtnPadding: 60px;
+      --stdOneBtnWidth: 180px;
+      --stdOneBtnHeight: 52px ;
+    }
+
     .buttonPurple:active {
-      background-color: #9068e2;
+      background-color: var(--primaryColorOne);
       border: none;
       color: white;
       padding: 15px;
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: var(--stdOneBtnPadding);
+      padding-right: var(--stdOneBtnPadding);
       text-align: center;
-      font-size: 16px;
+      font-size: var(--stdOneBtnFontSize);
       margin-left: auto;
       margin-top: 10px;
       margin-right: 10px;
-      width: 200px;
-      height: 55px;
+      width: var(--stdOneBtnWidth);
+      height: var(--stdOneBtnHeight);
       border-radius: 40px;
       font-family: 'Montserrat'
     }
 
     .tab button:hover {
-      background-color: #9068e2;
+      background-color: var(--primaryColorOne);
     }
 
     .buttonPurple {
@@ -38,15 +46,15 @@
       border: none;
       color: rgb(0, 0, 0);
       padding: 15px;
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: var(--stdOneBtnPadding);
+      padding-right: var(--stdOneBtnPadding);
       text-align: center;
-      font-size: 16px;
+      font-size: var(--stdOneBtnFontSize);
       margin-left: auto;
       margin-top: 10px;
       margin-right: 10px;
-      width: 200px;
-      height: 55px;
+      width: var(--stdOneBtnWidth);
+      height: var(--stdOneBtnHeight);
       border-radius: 40px;
       box-shadow: .5px .5px 2px 2px #888888;
       font-family: 'Montserrat'
@@ -60,31 +68,31 @@
       padding-left: 40px;
       padding-right: 40px;
       text-align: center;
-      font-size: 16px;
+      font-size: var(--stdOneBtnFontSize);
       margin-right: auto;
       margin-left: 10px;
       margin-top: 10px;
-      width: 200px;
-      height: 55px;
+      width: var(--stdOneBtnWidth);
+      height: var(--stdOneBtnHeight);
       border-radius: 40px;
       box-shadow: .5px .5px 2px 2px #888888;
       font-family: 'Montserrat'
     }
 
     .buttonWhite:active {
-      background-color: #9068e2;
+      background-color: var(--primaryColorOne);
       border: none;
       color: white;
       padding: 5px;
       padding-left: 40px;
       padding-right: 40px;
       text-align: center;
-      font-size: 16px;
+      font-size: var(--stdOneBtnFontSize);
       margin-right: auto;
       margin-left: 10px;
       margin-top: 10px;
-      width: 200px;
-      height: 55px;
+      width: var(--stdOneBtnWidth);
+      height: var(--stdOneBtnHeight);
       border-radius: 40px;
       box-shadow: .5px .5px 2px 2px #888888;
       font-family: 'Montserrat'
@@ -156,10 +164,19 @@
 
 <body>
   <div style="width: 100%">
-    
-    <div style="margin: 0 auto;background-image: url(gymbackground.jpeg);max-width:  100vw; height: 200px; width: 400px; border: 1px solid black;">
-      <div style="width: 100%; height: 100%; background-color: #5e63e79c">
 
+    <div style="margin: 0 auto;background-image: url(gymbackground.jpeg);max-width:  100vw;
+     height: var(--stdOneBtnWidth); width: 400px;">
+      <div style="width: 100%; height: 100%; background-color: #5e63e79c">
+        <div style="font-family: 'Montserrat';color: #ffffff; padding: 10%">
+          <h3>
+            <b>FITNESS LOGO</b>
+          </h3>
+          <br>
+          <h6>(1)Our Benefits our Benefits</h6>
+          <h6>(2)How you get Benefits</h6>
+          <h6>(3)How many vender</h6>
+        </div>
       </div>
     </div>
   </div>
@@ -172,7 +189,7 @@
   <div id="SignUpTab" class="tabcontent">
     <div id="centerwrapper">
 
-      <h3 style="color: #5e62e7;font-family: 'Montserrat'; margin: 20px 20px">SIGN IN</h3>
+      <h3 style="color: var(--primaryColorOne);font-family: 'Montserrat'; margin: 20px 20px">SIGN IN</h3>
 
 
       <form>
@@ -180,7 +197,7 @@
         <input class="inputStyle" type="text" placeholder="Last Name">
         <br>
         <input type="email" class="inputStyle" placeholder="Email Id">
-        <input class="number" type="text" placeholder="Phone Number">
+        <input class="inputStyle" type="number" placeholder="Phone Number">
         <br>
         <input type="number" class="inputStyle" placeholder="Age">
         <input class="inputStyle" type="text" placeholder="Gender">
