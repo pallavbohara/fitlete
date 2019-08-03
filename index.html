@@ -14,10 +14,13 @@
   <style>
     :root {
       --primaryColorOne: #9068e2;
+      --primaryColorTwo: #9068e2;
+      --primaryColorThree: #271f5c;
       --stdOneBtnFontSize: 15px;
       --stdOneBtnPadding: 60px;
       --stdOneBtnWidth: 180px;
       --stdOneBtnHeight: 52px;
+      --minTabContentHeight: 500px;
     }
 
     .buttonPurple:active {
@@ -57,7 +60,7 @@
       width: var(--stdOneBtnWidth);
       height: var(--stdOneBtnHeight);
       border-radius: 40px;
-      box-shadow: .5px .5px 2px 2px #888888;
+      box-shadow: .5px .5px 2px 2px #88888800;
       font-family: 'Montserrat'
     }
 
@@ -76,7 +79,7 @@
       width: var(--stdOneBtnWidth);
       height: var(--stdOneBtnHeight);
       border-radius: 40px;
-      box-shadow: .5px .5px 2px 2px #888888;
+      box-shadow: .5px .5px 2px 2px #88888800;
       font-family: 'Montserrat'
     }
 
@@ -101,12 +104,13 @@
 
     .contactNsupport {
       background-color: rgba(190, 190, 190, 0.925);
-      position: absolute;
+      position: relative;
       bottom: 0;
       width: 100%;
       text-align: center;
       font-family: 'Montserrat';
       display: flow-root;
+      margin-top: 20px;
     }
 
     .inputStyle {
@@ -182,17 +186,16 @@
     </div>
   </div>
   <div id="centerwrapper">
-    <div class="tab row" style="background: #ececec8c;padding-bottom: 20px;">
-      <button onclick="openTab(event, 'SignUpTab')" class="buttonPurple active tablinks">SIGN IN</button>
+    <div class="tab row" style="background: var(--primaryColorThree);padding-bottom: 20px;padding-top: 10px;">
+      <button onclick="openTab(event, 'SignUpTab')" class="buttonPurple active tablinks" id="defaultOpen">SIGN IN</button>
       <button onclick="openTab(event, 'CalculateBenefitTab')" class="buttonWhite tablinks">CALCULATE BENEFITS</button>
     </div>
   </div>
   <!-- Tab content -->
+  <div id="SignUpTab" class="tabcontent" style="background:var(--primaryColorThree)">
+    <div id="centerwrapper" style="min-height: var(--minTabContentHeight);">
 
-  <div id="SignUpTab" class="tabcontent">
-    <div id="centerwrapper">
-
-      <h3 style="color: var(--primaryColorOne);font-family: 'Montserrat'; margin: 20px 20px">SIGN IN</h3>
+      <h3 style="color: white;font-family: 'Montserrat'; margin: 00px 20px 20px">SIGN IN</h3>
 
 
       <form>
@@ -229,14 +232,14 @@
     </div>
   </div>
   <div id="CalculateBenefitTab" class="tabcontent">
-    <div id="centerwrapper">
+    <div id="centerwrapper" style="min-height: var(--minTabContentHeight);">
       In progress...
     </div>
   </div>
 
-  <!-- <div class="contactNsupport">
+  <div class="contactNsupport">
     <i>Contact and support</i>
-  </div> -->
+  </div>
   <script>
     function openTab(evt, tabName) {
       var i, tabcontent, tablinks;
@@ -252,6 +255,10 @@
       evt.currentTarget.className += " active";
     }
   </script>
+  <script>
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      </script>
 </body>
 
 </html>
