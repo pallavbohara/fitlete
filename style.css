@@ -1,0 +1,180 @@
+
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+
+:root {
+    --primaryColorOne: #9068e2;
+    --primaryColorTwo: #9068e2;
+    --primaryColorThree: #271f5c;
+    --stdOneBtnFontSize: 15px;
+    --stdTwoBtnFontSize: 11px;
+    --stdOneBtnPadding: 60px;
+    --stdOneBtnWidth: 180px;
+    --stdOneBtnHeight: 52px;
+    --stdTwoBtnHeight: 32px;
+
+    --minTabContentHeight: 500px;
+  }
+
+  .buttonPurpleActive {
+    background-color: var(--primaryColorOne);
+    border: none;
+    color: white;
+    padding: 15px;
+    padding-left: var(--stdOneBtnPadding);
+    padding-right: var(--stdOneBtnPadding);
+    text-align: center;
+    font-size: var(--stdOneBtnFontSize);
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: var(--stdOneBtnWidth);
+    height: var(--stdOneBtnHeight);
+    border-radius: 40px;
+    font-family: 'Montserrat'
+  }
+
+  .tab button:hover {
+    background-color: var(--primaryColorOne);
+  }
+
+  .buttonPurple {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    padding-left: var(--stdOneBtnPadding);
+    padding-right: var(--stdOneBtnPadding);
+    text-align: center;
+    font-size: var(--stdOneBtnFontSize);
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: var(--stdOneBtnWidth);
+    height: var(--stdOneBtnHeight);
+    border-radius: 40px;
+    box-shadow: .5px .5px 2px 2px #88888800;
+    font-family: 'Montserrat'
+  }
+  .buttonSubmitSignIn {
+    background-color: var(--primaryColorOne);
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    color: white;
+    padding-left: var(--stdOneBtnPadding);
+    padding-right: var(--stdOneBtnPadding);
+    text-align: center;
+    font-size: var(--stdTwoBtnFontSize);
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: var(--stdOneBtnWidth);
+    height: var(--stdTwoBtnHeight);
+    border-radius: 40px;
+    box-shadow: .5px .5px 2px 2px #88888800;
+    font-family: 'Montserrat'
+  }
+  .buttonWhite {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-size: var(--stdOneBtnFontSize);
+    margin-right: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: var(--stdOneBtnWidth);
+    height: var(--stdOneBtnHeight);
+    border-radius: 40px;
+    box-shadow: .5px .5px 2px 2px #88888800;
+    font-family: 'Montserrat'
+  }
+
+  .buttonWhiteActive {
+    background-color: var(--primaryColorOne);
+    border: none;
+    color: white;
+    padding: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-size: var(--stdOneBtnFontSize);
+    margin-right: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: var(--stdOneBtnWidth);
+    height: var(--stdOneBtnHeight);
+    border-radius: 40px;
+    font-family: 'Montserrat'
+  }
+  
+.btnSecondHead{
+    font-family: 'Montserrat';
+    color: white;
+    margin: 00px 20px 20px;
+}
+  .contactNsupport {
+    background-color: rgba(190, 190, 190, 0.925);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat';
+    display: flow-root;
+    margin-top: 20px;
+  }
+
+  .inputStyle {
+    border-radius: 30px;
+    border-color: rgba(80, 80, 80, 0);
+    padding: 10px 0px 10px 20px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    background: #f0f0f0;
+    width: 170px;
+    font-family: 'Montserrat';
+  }
+
+  /* Style the tab content */
+
+  .tabcontent {
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+
+  /* Fade in tabs */
+
+  @-webkit-keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #centerwrapper {
+    background-color: rgba(255, 0, 0, 0);
+    /* for visualization purposes */
+    text-align: center;
+  }

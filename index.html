@@ -6,171 +6,18 @@
   <link rel="shortcut icon" href="favicon.ico" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <style>
-    :root {
-      --primaryColorOne: #9068e2;
-      --primaryColorTwo: #9068e2;
-      --primaryColorThree: #271f5c;
-      --stdOneBtnFontSize: 15px;
-      --stdOneBtnPadding: 60px;
-      --stdOneBtnWidth: 180px;
-      --stdOneBtnHeight: 52px;
-      --minTabContentHeight: 500px;
-    }
-
-    .buttonPurple:active {
-      background-color: var(--primaryColorOne);
-      border: none;
-      color: white;
-      padding: 15px;
-      padding-left: var(--stdOneBtnPadding);
-      padding-right: var(--stdOneBtnPadding);
-      text-align: center;
-      font-size: var(--stdOneBtnFontSize);
-      margin-left: auto;
-      margin-top: 10px;
-      margin-right: 10px;
-      width: var(--stdOneBtnWidth);
-      height: var(--stdOneBtnHeight);
-      border-radius: 40px;
-      font-family: 'Montserrat'
-    }
-
-    .tab button:hover {
-      background-color: var(--primaryColorOne);
-    }
-
-    .buttonPurple {
-      background-color: #ffffff;
-      border: none;
-      color: rgb(0, 0, 0);
-      padding: 15px;
-      padding-left: var(--stdOneBtnPadding);
-      padding-right: var(--stdOneBtnPadding);
-      text-align: center;
-      font-size: var(--stdOneBtnFontSize);
-      margin-left: auto;
-      margin-top: 10px;
-      margin-right: 10px;
-      width: var(--stdOneBtnWidth);
-      height: var(--stdOneBtnHeight);
-      border-radius: 40px;
-      box-shadow: .5px .5px 2px 2px #88888800;
-      font-family: 'Montserrat'
-    }
-
-    .buttonWhite {
-      background-color: #ffffff;
-      border: none;
-      color: rgb(0, 0, 0);
-      padding: 5px;
-      padding-left: 40px;
-      padding-right: 40px;
-      text-align: center;
-      font-size: var(--stdOneBtnFontSize);
-      margin-right: auto;
-      margin-left: 10px;
-      margin-top: 10px;
-      width: var(--stdOneBtnWidth);
-      height: var(--stdOneBtnHeight);
-      border-radius: 40px;
-      box-shadow: .5px .5px 2px 2px #88888800;
-      font-family: 'Montserrat'
-    }
-
-    .buttonWhite:active {
-      background-color: var(--primaryColorOne);
-      border: none;
-      color: white;
-      padding: 5px;
-      padding-left: 40px;
-      padding-right: 40px;
-      text-align: center;
-      font-size: var(--stdOneBtnFontSize);
-      margin-right: auto;
-      margin-left: 10px;
-      margin-top: 10px;
-      width: var(--stdOneBtnWidth);
-      height: var(--stdOneBtnHeight);
-      border-radius: 40px;
-      box-shadow: .5px .5px 2px 2px #888888;
-      font-family: 'Montserrat'
-    }
-
-    .contactNsupport {
-      background-color: rgba(190, 190, 190, 0.925);
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      font-family: 'Montserrat';
-      display: flow-root;
-      margin-top: 20px;
-    }
-
-    .inputStyle {
-      border-radius: 30px;
-      border-color: rgba(80, 80, 80, 0.212);
-      padding: 10px 0px 10px 20px;
-      font-size: 12px;
-      margin-bottom: 5px;
-      background: #f0f0f0;
-      width: 170px;
-      font-family: 'Montserrat';
-    }
-
-    /* Style the tab content */
-
-    .tabcontent {
-      display: none;
-      -webkit-animation: fadeEffect 1s;
-      animation: fadeEffect 1s;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus,
-    button:focus {
-      outline: none;
-    }
-
-    /* Fade in tabs */
-
-    @-webkit-keyframes fadeEffect {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeEffect {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    #centerwrapper {
-      background-color: rgba(255, 0, 0, 0);
-      /* for visualization purposes */
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 
-<body>
+<body style="background: var(--primaryColorThree)">
   <div style="width: 100%">
 
-    <div style="margin: 0 auto;background-image: url(gymbackground.jpeg);max-width:  100vw;
+    <div style="margin: 0 auto; background-image: url(gymbackground.jpeg);max-width:  100vw;
      height: 250px; width: 450px;">
       <div style="width: 100%; height: 100%; background-color: #5e63e79c">
         <div style="font-family: 'Montserrat';color: #ffffff; padding: 10%">
@@ -186,17 +33,16 @@
     </div>
   </div>
   <div id="centerwrapper">
-    <div class="tab row" style="background: var(--primaryColorThree);padding-bottom: 20px;padding-top: 10px;">
-      <button onclick="openTab(event, 'SignUpTab')" class="buttonPurple active tablinks" id="defaultOpen">SIGN IN</button>
-      <button onclick="openTab(event, 'CalculateBenefitTab')" class="buttonWhite tablinks">CALCULATE BENEFITS</button>
+    <div class="tab row" style="padding-bottom: 20px;padding-top: 10px;">
+      <button onclick="openTab(event, 'SignUpTab')" class="tablinks buttonPurple" id="defaultOpen">SIGN IN</button>
+      <button onclick="openTab(event, 'CalculateBenefitTab')" class="tablinks buttonWhite">CALCULATE BENEFITS</button>
     </div>
   </div>
   <!-- Tab content -->
-  <div id="SignUpTab" class="tabcontent" style="background:var(--primaryColorThree)">
-    <div id="centerwrapper" style="min-height: var(--minTabContentHeight);">
+  <div id="SignUpTab" class="tabcontent" >
+    <div id="centerwrapper" style="min-height: var(--minTabContentHeight)">
 
-      <h3 style="color: white;font-family: 'Montserrat'; margin: 00px 20px 20px">SIGN IN</h3>
-
+      <h3 class="btnSecondHead"><u>SIGN IN</u></h3>
 
       <form>
         <input type="text" class="inputStyle" placeholder="First Name">
@@ -214,7 +60,7 @@
           <option value="Delhi">Delhi</option>
           <option value="Kolkata">Kolkata</option>
           <option value="Jaipur">Jaipur</option>
-        </select>
+        </select> 
         <select name="state" class="inputStyle" type="text" placeholder="State">
           <option value="" disabled selected>State</option>
           <option value="volvo">Rajasthan</option>
@@ -227,13 +73,13 @@
         <input class="inputStyle" type="password" placeholder="Confirm Password">
         <br>
 
-        <input type="submit" value="SIGN IN" class="buttonPurple">
+        <input type="submit" value="SIGN IN" class="buttonSubmitSignIn">
       </form>
     </div>
   </div>
   <div id="CalculateBenefitTab" class="tabcontent">
-    <div id="centerwrapper" style="min-height: var(--minTabContentHeight);">
-      In progress...
+    <div id="centerwrapper"  style="min-height: var(--minTabContentHeight);">
+      <h4 class="btnSecondHead"><u>CALCULATE BENEFITS</u></h4>
     </div>
   </div>
 
@@ -249,10 +95,10 @@
       }
       tablinks = document.getElementsByClassName("tablinks")
       for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace("Active", "");
       }
       document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
+      evt.currentTarget.className += "Active";
     }
   </script>
   <script>
