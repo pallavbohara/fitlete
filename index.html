@@ -11,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
-
+  <script src="form.validation.js"></script>
 </head>
 
 <body style="background: var(--primaryColorThree)">
@@ -25,7 +25,7 @@
             <b>FITLETE</b>
           </h3>
           <br>
-          <h6>(1) Our Benefits our Benefits</h6>
+          <h6>(1) Our Benefits</h6>
           <h6>(2) How you get Benefits</h6>
           <h6>(3) How many vender</h6>
         </div>
@@ -44,12 +44,12 @@
 
       <h3 class="btnSecondHead"><u>SIGN UP</u></h3>
 
-      <form>
-        <input type="text" class="inputStyle" placeholder="First Name">
-        <input class="inputStyle" type="text" placeholder="Last Name">
+      <form name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post">
+        <input type="text" class="inputStyle" name="FirstName" placeholder="First Name">
+        <input class="inputStyle" type="text" name="LastName" placeholder="Last Name">
         <br>
-        <input type="email" class="inputStyle" placeholder="Email Id">
-        <input class="inputStyle" type="number" placeholder="Phone Number">
+        <input type="email" class="inputStyle" name="EMail" placeholder="Email Id">
+        <input class="inputStyle" type="number" name="Telephone" placeholder="Phone Number">
         <br>
         <input type="number" class="inputStyle" placeholder="Age">
         <select name="gender" class="inputStyle">
@@ -75,11 +75,11 @@
         </select>
         <br>
         <div class="input-container inputStyle">
-          <input type="password" id="password" style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Password">
+          <input type="password" name="Password" id="password" style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Password">
           <a onclick='show_hide_password_1(event)' class="fa fa-eye icon"></a>
         </div>
         <div class="input-container inputStyle">
-          <input type="password" id="cpassword" style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Confirm Password">
+          <input type="password" name="CPassword" id="cpassword" style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Confirm Password">
           <a onclick='show_hide_password_2(event)' class="fa fa-eye icon"></a>
         </div>
 
