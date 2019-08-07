@@ -44,7 +44,7 @@
 
       <h3 class="btnSecondHead"><u>SIGN UP</u></h3>
 
-      <form name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post">
+      <form name="RegForm" onsubmit="return FormValidationCheck()" method="post">
         <input type="text" class="inputStyle" name="FirstName" placeholder="First Name">
         <input class="inputStyle" type="text" name="LastName" placeholder="Last Name">
         <br>
@@ -95,57 +95,18 @@
     </div>
   </div>
 
-  <div class="contactNsupport">
-    <i>Contact and support</i>
+  <div style="display: flex; position: relative; background:  rgba(190, 190, 190, 0.925);">
+    <i class="contactNsupport">Contact and support</i>
+    <div style="position: absolute;right: 0;">
+      <img class="bottom-icons" src="icon_facebook.png" />
+      <img class="bottom-icons" src="icon_instagram.png" />
+      <img class="bottom-icons" src="icon_twitter.png" />
+    </div>
+    
   </div>
-  <script>
-    function openTab(evt, tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks")
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace("Active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += "Active";
-    }
-  </script>
   <script>
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
-  </script>
-  <script>
-    function show_hide_password_1(evt) {
-
-
-      var is_show_password = evt.currentTarget.className == "fa fa-eye icon";
-      if (is_show_password) {
-        document.getElementById("password").setAttribute('type', 'text');
-        evt.currentTarget.className = "fa fa-eye-slash icon";
-      }
-      else {
-        document.getElementById("password").setAttribute('type', 'password');
-        evt.currentTarget.className = "fa fa-eye icon";
-      }
-
-    }
-    function show_hide_password_2(evt) {
-
-      // document.getElementById("password").rep
-      var is_show_password = evt.currentTarget.className == "fa fa-eye icon";
-      if (is_show_password) {
-        document.getElementById("cpassword").setAttribute('type', 'text');
-        evt.currentTarget.className = "fa fa-eye-slash icon";
-      }
-      else {
-        document.getElementById("cpassword").setAttribute('type', 'password');
-        evt.currentTarget.className = "fa fa-eye icon";
-      }
-
-    }
   </script>
 </body>
 

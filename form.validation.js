@@ -1,4 +1,4 @@
-function GEEKFORGEEKS() {
+function FormValidationCheck() {
     var fname = document.forms["RegForm"]["FirstName"];
     var lname = document.forms["RegForm"]["LastName"];
     var email = document.forms["RegForm"]["EMail"];
@@ -60,3 +60,44 @@ function GEEKFORGEEKS() {
     }
     return true;
 }
+function show_hide_password_1(evt) {
+
+
+    var is_show_password = evt.currentTarget.className == "fa fa-eye icon";
+    if (is_show_password) {
+      document.getElementById("password").setAttribute('type', 'text');
+      evt.currentTarget.className = "fa fa-eye-slash icon";
+    }
+    else {
+      document.getElementById("password").setAttribute('type', 'password');
+      evt.currentTarget.className = "fa fa-eye icon";
+    }
+
+  }
+  function show_hide_password_2(evt) {
+
+    // document.getElementById("password").rep
+    var is_show_password = evt.currentTarget.className == "fa fa-eye icon";
+    if (is_show_password) {
+      document.getElementById("cpassword").setAttribute('type', 'text');
+      evt.currentTarget.className = "fa fa-eye-slash icon";
+    }
+    else {
+      document.getElementById("cpassword").setAttribute('type', 'password');
+      evt.currentTarget.className = "fa fa-eye icon";
+    }
+
+  }
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks")
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace("Active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += "Active";
+  }
