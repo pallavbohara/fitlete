@@ -12,8 +12,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="form.validation.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="870956073546-a2r99tv519oqpe6kfk8n6cgq4r4o0svu.apps.googleusercontent.com">
+  <!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="870956073546-a2r99tv519oqpe6kfk8n6cgq4r4o0svu.apps.googleusercontent.com"> -->
 </head>
 
 <body style="background: var(--primaryColorThree)">
@@ -43,7 +43,7 @@
   <!-- Tab content -->
   <div id="SignUpTab" class="tabcontent">
     <div id="centerwrapper" style="min-height: var(--minTabContentHeight)">
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
 
       <h3 class="btnSecondHead"><u>SIGN UP</u></h3>
 
@@ -78,11 +78,13 @@
         </select>
         <br>
         <div class="input-container inputStyle">
-          <input type="password" name="Password" id="password" style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Password">
+          <input type="password" name="Password" id="password"
+            style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Password">
           <a onclick='show_hide_password_1(event)' class="fa fa-eye icon"></a>
         </div>
         <div class="input-container inputStyle">
-          <input type="password" name="CPassword" id="cpassword" style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Confirm Password">
+          <input type="password" name="CPassword" id="cpassword"
+            style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Confirm Password">
           <a onclick='show_hide_password_2(event)' class="fa fa-eye icon"></a>
         </div>
 
@@ -95,10 +97,47 @@
   <div id="CalculateBenefitTab" class="tabcontent">
     <div id="centerwrapper" style="min-height: var(--minTabContentHeight);">
       <h4 class="btnSecondHead"><u>CALCULATE BENEFITS</u></h4>
+      <div class="container">
+        <h2>Hoverable Dark Table</h2>
+        <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>
+        <table class="table" style="background-color:white;">
+          <thead style="background-color: var(--primaryColorOne); color: white;align-self:center;">
+            <tr>
+              <th>Let us know your average spends</th>
+              <th>Your yearly savings with Multiply FLAGSHIP(RS.)</th>
+              <th>You'll be saving with</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="gas-pump-16.png" />
+              </td>
+              <td>John</td>
+              <td>Doe</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="car-16.png" />
+              </td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="mobile-phone-8-24.png" />
+                  </td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
-  <div style="display: flex; position: relative; background:  rgba(190, 190, 190, 0.925); margin-top: 20px">
+  <div
+    style="display: flex; position: relative; background:  rgba(190, 190, 190, 0.925); margin-top: 20px;padding-bottom: 5px">
     <i class="contactNsupport">Contact and support</i>
   </div>
   <div style="width: 100%;text-align: center;">

@@ -14,7 +14,9 @@
 
     --minTabContentHeight: 45px;
   }
-
+  table, th, td {
+    border: 1px solid black;
+  }
   .buttonPurpleActive {
     background-color: var(--primaryColorOne);
     border: none;
