@@ -12,6 +12,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="form.validation.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="870956073546-a2r99tv519oqpe6kfk8n6cgq4r4o0svu.apps.googleusercontent.com">
 </head>
 
 <body style="background: var(--primaryColorThree)">
@@ -41,6 +43,7 @@
   <!-- Tab content -->
   <div id="SignUpTab" class="tabcontent">
     <div id="centerwrapper" style="min-height: var(--minTabContentHeight)">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
       <h3 class="btnSecondHead"><u>SIGN UP</u></h3>
 
