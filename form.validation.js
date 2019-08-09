@@ -134,8 +134,8 @@ function ReCalculateForAllFields() {
     e = document.getElementById("movieTimes");
     var movieTimes = e.options[e.selectedIndex].value;
 
-    // e = document.getElementById("hotelTimes");
-    // var hotelTimes = e.options[e.selectedIndex].value;
+    e = document.getElementById("hotelTimes");
+    var hotelTimes = e.options[e.selectedIndex].value;
 
     e = document.getElementById("electronicExpense");
     var electronicExpense = e.options[e.selectedIndex].value;
@@ -146,25 +146,24 @@ function ReCalculateForAllFields() {
     e = document.getElementById("equipmentExpense");
     var equipmentExpense = e.options[e.selectedIndex].value;
 
-    // e = document.getElementById("insuranceExpense");
-    // var insuranceExpense = e.options[e.selectedIndex].value;
+    e = document.getElementById("insuranceExpense");
+    var insuranceExpense = e.options[e.selectedIndex].value;
 
     if (levelValue == "level1") {
       document.getElementById("gymBenefit").innerHTML = gymFitnessExpense * .08;
       document.getElementById("cabBenefit").innerHTML = cabExpense * .08;
-      document.getElementById("billBenefit").innerHTML = billExpense * .08;
+      document.getElementById("billBenefit").innerHTML = billExpense * .06;
       document.getElementById("fuelBenefit").innerHTML = fuelExpense * .08;
-      document.getElementById("shoppingBenefit").innerHTML = shoppingExpense * .08;
-      // document.getElementById("gymBenefit").innerHTML = gymFitnessExpense*.08;
-      // document.getElementById("cabBenefit").innerHTML = cabExpense*.08;
-      // document.getElementById("billBenefit").innerHTML = billExpense*.08;
-      // document.getElementById("fuelBenefit").innerHTML = fuelExpense*.08;
-      // document.getElementById("shoppingBenefit").innerHTML = shoppingExpense*.08;
-      // document.getElementById("gymBenefit").innerHTML = gymFitnessExpense*.08;
-      // document.getElementById("cabBenefit").innerHTML = cabExpense*.08;
-      // document.getElementById("billBenefit").innerHTML = ((equipmentExpense*.01)<300?equipmentExpense*.01:300);
-      // document.getElementById("insuranceBenefit").innerHTML = insuranceExpense*.06;
-
+      document.getElementById("shoppingBenefit").innerHTML = shoppingExpense * .17;
+      document.getElementById("airBenefit").innerHTML = airTimes*.08;
+      document.getElementById("busBenefit").innerHTML = busTimes*.08;
+      document.getElementById("onlineBenefit").innerHTML = onlineExpense*.08;
+      document.getElementById("movieBenefit").innerHTML = movieTimes*.08;
+      document.getElementById("hotelBenefit").innerHTML = hotelTimes*.08;
+      document.getElementById("electronicBenefit").innerHTML = (((electronicExpense*.1)<1000)?(electronicExpense*.1):1000);
+      document.getElementById("groceryBenefit").innerHTML =   groceryExpense*.08;
+      document.getElementById("equipmentBenefit").innerHTML = (((equipmentExpense*.1)<300)?(equipmentExpense*.1):300);
+      document.getElementById("insuranceBenefit").innerHTML = insuranceExpense*.06;
     }
   }
   catch (err) {
