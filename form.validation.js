@@ -110,8 +110,8 @@ function ReCalculateForAllFields() {
     e = document.getElementById("gymFitnessExpense");
     var gymFitnessExpense = e.options[e.selectedIndex].value;
 
-    e = document.getElementById("cabExpense");
-    var cabExpense = e.options[e.selectedIndex].value;
+    e = document.getElementById("cabTimes");
+    var cabTimes = e.options[e.selectedIndex].value;
 
     e = document.getElementById("billExpense");
     var billExpense = e.options[e.selectedIndex].value;
@@ -151,15 +151,15 @@ function ReCalculateForAllFields() {
 
     if (levelValue == "level1") {
       document.getElementById("gymBenefit").innerHTML = gymFitnessExpense * .08;
-      document.getElementById("cabBenefit").innerHTML = cabExpense * .08;
+      document.getElementById("cabBenefit").innerHTML = ((cabTimes<5)?(cabTimes*.15*300):4*.15*300);
       document.getElementById("billBenefit").innerHTML = billExpense * .06;
       document.getElementById("fuelBenefit").innerHTML = fuelExpense * .08;
       document.getElementById("shoppingBenefit").innerHTML = shoppingExpense * .17;
-      document.getElementById("airBenefit").innerHTML = airTimes*.08;
-      document.getElementById("busBenefit").innerHTML = busTimes*.08;
+      document.getElementById("airBenefit").innerHTML =((airTimes<4)?(airTimes*.1*6000):3*.1*6000);
+      document.getElementById("busBenefit").innerHTML = ((busTimes<5)?(busTimes*.1*1500):4*.1*1500);
       document.getElementById("onlineBenefit").innerHTML = onlineExpense*.08;
-      document.getElementById("movieBenefit").innerHTML = movieTimes*.08;
-      document.getElementById("hotelBenefit").innerHTML = hotelTimes*.08;
+      document.getElementById("movieBenefit").innerHTML = ((movieTimes<7)?(movieTimes*.2*250):6*.2*250);
+      document.getElementById("hotelBenefit").innerHTML = ((hotelTimes<8)?(hotelTimes*.1*3500):7*.1*3500);
       document.getElementById("electronicBenefit").innerHTML = (((electronicExpense*.1)<1000)?(electronicExpense*.1):1000);
       document.getElementById("groceryBenefit").innerHTML =   groceryExpense*.08;
       document.getElementById("equipmentBenefit").innerHTML = (((equipmentExpense*.1)<300)?(equipmentExpense*.1):300);
