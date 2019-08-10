@@ -155,11 +155,11 @@ function ReCalculateForAllFields() {
     electronicBenefit,groceryBenefit,equipmentBenefit,insuranceBenefit;
     if (levelValue == "level1") {
       
-      document.getElementById("gymBenefit").innerHTML=gymBenefit = gymFitnessExpense * .08;
-      document.getElementById("cabBenefit").innerHTML=cabBenefit =((cabTimes<5)?(cabTimes*.15*300):4*.15*300);
+      document.getElementById("gymBenefit").innerHTML=gymBenefit = Math.floor(gymFitnessExpense * .08*12);
+      document.getElementById("cabBenefit").innerHTML=cabBenefit =Math.floor(((cabTimes<5)?(cabTimes*.15*300*12):4*.15*300*12));
       document.getElementById("billBenefit").innerHTML=billBenefit = Math.floor(billExpense * .06);
-      document.getElementById("fuelBenefit").innerHTML=fuelBenefit = Math.floor(((fuelExpense<6001)?(fuelExpense*.02):.02*6000));
-      document.getElementById("shoppingBenefit").innerHTML=shoppingBenefit = Math.floor(shoppingExpense * .17);
+      document.getElementById("fuelBenefit").innerHTML=fuelBenefit = Math.floor(((fuelExpense<6001)?(fuelExpense*.02*12):.02*6000*12));
+      document.getElementById("shoppingBenefit").innerHTML=shoppingBenefit = Math.floor(shoppingExpense * .17*12);
       document.getElementById("airBenefit").innerHTML=airBenefit =Math.floor(((airTimes<4)?(airTimes*.1*6000):3*.1*6000));
       document.getElementById("busBenefit").innerHTML=busBenefit = Math.floor(((busTimes<5)?(busTimes*.1*1500):4*.1*1500));
       document.getElementById("onlineBenefit").innerHTML=onlineBenefit = Math.floor(onlineExpense*.08);
