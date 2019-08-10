@@ -102,8 +102,8 @@
     <div id="centerwrapper" style="min-height: var(--minTabContentHeight);">
       <h4 class="btnSecondHead"><u>CALCULATE BENEFITS</u></h4>
       <div class="container">
-        <table class="table" style="background-color:white;">
-          <thead style="background-color: var(--primaryColorOne); color: white;align-self:center;">
+        <table class="table" style="background-color:white;font-family: cursive">
+          <thead style="background-color: var(--primaryColorOne); color: white;">
             <tr>
               <th>Let us know your average spends</th>
               <th>
@@ -124,13 +124,12 @@
             </tr>
           </thead>
           <tbody>
-
             <tr>
               <td>
                 <img src="icons/ic_treadmill.png" />
                 <p>Fitness center/Gym cost?</p>
                 <b>Rs.</b>
-                <select id="gymFitnessExpense" style="margin: 5px">
+                <select id="gymFitnessExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="1000">1000</option>
                   <option value="1200">1200</option>
                   <option value="1400">1400</option>
@@ -148,7 +147,7 @@
               <td>
                 <img src="icons/ic_frontal_taxi_cab.png" />
                 <p>How many cab rides do you take in a month?</p>
-                <select id="cabTimes" style="margin: 5px">
+                <select id="cabTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -157,7 +156,7 @@
                   <option value="6">6</option>
                   <option value="7">7</option>
                   <option value="8">8</option>
-                  <option value=">8">>8</option>
+                  <option value="8">>8</option>
                 </select>
               </td>
               <td id="cabBenefit">0</td>
@@ -167,7 +166,7 @@
                 <img src="icons/ic_smartphone.png" />
                 <p>What does your monthly mobile recharge/bill come to?</p>
                 <b>Rs.</b>
-                <select id="billExpense" style="margin: 5px">
+                <select id="billExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="100">100</option>
                   <option value="200">200</option>
                   <option value="300">300</option>
@@ -178,7 +177,7 @@
                   <option value="800">800</option>
                   <option value="900">900</option>
                   <option value="1000">1000</option>
-                  <option value=">1000">>1000</option>
+                  <option value="1000">>1000</option>
                 </select>
               </td>
               <td id="billBenefit">0</td>
@@ -188,7 +187,7 @@
                 <img src="icons/ic_fuel.png" />
                 <p>In a month how much you spend on fuel?</p>
                 <b>Rs.</b>
-                <select id="fuelExpense" style="margin: 5px">
+                <select id="fuelExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="1000">1000</option>
                   <option value="2000">2000</option>
                   <option value="3000">3000</option>
@@ -209,14 +208,14 @@
                 <img src="icons/ic_shopping_bag.png" />
                 <p>What is your monthly spend on online shopping(Apparelware)?</p>
                 <b>Rs.</b>
-                <select id="shoppingExpense" style="margin: 5px">
+                <select id="shoppingExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="2000">2000</option>
                   <option value="4000">4000</option>
                   <option value="6000">6000</option>
                   <option value="8000">8000</option>
                   <option value="10000">10000</option>
                   <option value="12000">12000</option>
-                  <option value=">12000">>12000</option>
+                  <option value="12000">>12000</option>
                 </select>
               </td>
               <td id="shoppingBenefit">0</td>
@@ -225,7 +224,7 @@
               <td>
                 <img src="icons/ic_travel.png" />
                 <p>How many air trips do you take in a year?</p>
-                <select id="airTimes" style="margin: 5px">
+                <select id="airTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -243,7 +242,7 @@
               <td>
                 <img src="icons/ic_bus_side_view.png" />
                 <p>How many long distance bus trips do you have in a year?</p>
-                <select id="busTimes" style="margin: 5px">
+                <select id="busTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -269,14 +268,14 @@
                 <img src="icons/ic_teacher.png" />
                 <p>Online Classes/Services?</p>
                 <b>Rs.</b>
-                <select id="onlineExpense" style="margin: 5px">
+                <select id="onlineExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="2000">2000</option>
                   <option value="4000">4000</option>
                   <option value="6000">6000</option>
                   <option value="8000">8000</option>
                   <option value="10000">10000</option>
                   <option value="12000">12000</option>
-                  <option value=">12000">>12000</option>
+                  <option value="12000">>12000</option>
                 </select>
               </td>
               <td id="onlineBenefit">0</td>
@@ -285,7 +284,7 @@
               <td>
                 <img src="icons/ic_movies.png" />
                 <p>How many times a year do you go for movies?</p>
-                <select id="movieTimes" style="margin: 5px">
+                <select id="movieTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -307,7 +306,7 @@
               <td>
                 <img src="icons/ic_hotel.png" />
                 <p>How many days of hotel stay do you have in a year?</p>
-                <select id="hotelTimes" style="margin: 5px">
+                <select id="hotelTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -333,13 +332,13 @@
                 <img src="icons/ic_joystick.png" />
                 <p>How much do you spend on electronic devices in a year?</p>
                 <b>Rs.</b>
-                <select id="electronicExpense" style="margin: 5px">
+                <select id="electronicExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="10000">10000</option>
                   <option value="20000">20000</option>
                   <option value="30000">30000</option>
                   <option value="40000">40000</option>
                   <option value="50000">50000</option>
-                  <option value=">50000">>50000</option>
+                  <option value="50000">>50000</option>
                 </select>
               </td>
               <td id="electronicBenefit">0</td>
@@ -349,7 +348,7 @@
                 <img src="icons/ic_grocery.png" />
                 <p>What is your average monthly grocery bill?</p>
                 <b>Rs.</b>
-                <select id="groceryExpense" style="margin: 5px">
+                <select id="groceryExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="3000">3000</option>
                   <option value="4000">4000</option>
                   <option value="5000">5000</option>
@@ -358,7 +357,7 @@
                   <option value="8000">8000</option>
                   <option value="9000">9000</option>
                   <option value="10000">10000</option>
-                  <option value=">10000">>10000</option>
+                  <option value="10000">>10000</option>
                 </select>
               </td>
               <td id="groceryBenefit">0</td>
@@ -368,7 +367,7 @@
                 <img src="icons/ic_fitness.png" />
                 <p>Fitness Equipment and Consumables</p>
                 <b>Rs.</b>
-                <select id="equipmentExpense" style="margin: 5px">
+                <select id="equipmentExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="3000">3000</option>
                   <option value="4000">4000</option>
                   <option value="5000">5000</option>
@@ -377,12 +376,12 @@
                   <option value="8000">8000</option>
                   <option value="9000">9000</option>
                   <option value="10000">10000</option>
-                  <option value=">10000">11000</option>
-                  <option value="7000">12000</option>
-                  <option value="8000">13000</option>
-                  <option value="9000">14000</option>
-                  <option value="10000">15000</option>
-                  <option value=">10000">>15000</option>
+                  <option value="11000">11000</option>
+                  <option value="12000">12000</option>
+                  <option value="13000">13000</option>
+                  <option value="14000">14000</option>
+                  <option value="15000">15000</option>
+                  <option value="15000">>15000</option>
                 </select>
               </td>
               <td id="equipmentBenefit">0</td>
@@ -392,7 +391,7 @@
                 <img src="icons/ic_doctor.png" />
                 <p>Expense on Family Health Insurance Premium(4 people)</p>
                 <b>Rs.</b>
-                <select id="insuranceExpense" style="margin: 5px">
+                <select id="insuranceExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
                   <option value="3000">25000</option>
                   <option value="4000">30000</option>
                   <option value="5000">35000</option>
@@ -403,6 +402,10 @@
                 </select>
               </td>
               <td id="insuranceBenefit">0</td>
+            </tr>
+            <tr>
+              <td style="background-color: var(--primaryColorOne); color: white; ">Sum</td>
+              <td id="sumBenefit">0</td>
             </tr>
           </tbody>
         </table>

@@ -148,23 +148,49 @@ function ReCalculateForAllFields() {
 
     e = document.getElementById("insuranceExpense");
     var insuranceExpense = e.options[e.selectedIndex].value;
-
+    var gymBenefit,cabBenefit,billBenefit,fuelBenefit,
+    shoppingBenefit,airBenefit,
+    busBenefit,onlineBenefit,
+    movieBenefit,hotelBenefit,
+    electronicBenefit,groceryBenefit,equipmentBenefit,insuranceBenefit;
     if (levelValue == "level1") {
-      document.getElementById("gymBenefit").innerHTML = gymFitnessExpense * .08;
-      document.getElementById("cabBenefit").innerHTML = ((cabTimes<5)?(cabTimes*.15*300):4*.15*300);
-      document.getElementById("billBenefit").innerHTML = billExpense * .06;
-      document.getElementById("fuelBenefit").innerHTML = fuelExpense * .08;
-      document.getElementById("shoppingBenefit").innerHTML = shoppingExpense * .17;
-      document.getElementById("airBenefit").innerHTML =((airTimes<4)?(airTimes*.1*6000):3*.1*6000);
-      document.getElementById("busBenefit").innerHTML = ((busTimes<5)?(busTimes*.1*1500):4*.1*1500);
-      document.getElementById("onlineBenefit").innerHTML = onlineExpense*.08;
-      document.getElementById("movieBenefit").innerHTML = ((movieTimes<7)?(movieTimes*.2*250):6*.2*250);
-      document.getElementById("hotelBenefit").innerHTML = ((hotelTimes<8)?(hotelTimes*.1*3500):7*.1*3500);
-      document.getElementById("electronicBenefit").innerHTML = (((electronicExpense*.1)<1000)?(electronicExpense*.1):1000);
-      document.getElementById("groceryBenefit").innerHTML =   groceryExpense*.08;
-      document.getElementById("equipmentBenefit").innerHTML = (((equipmentExpense*.1)<300)?(equipmentExpense*.1):300);
-      document.getElementById("insuranceBenefit").innerHTML = insuranceExpense*.06;
+      
+      document.getElementById("gymBenefit").innerHTML=gymBenefit = gymFitnessExpense * .08;
+      document.getElementById("cabBenefit").innerHTML=cabBenefit =((cabTimes<5)?(cabTimes*.15*300):4*.15*300);
+      document.getElementById("billBenefit").innerHTML=billBenefit = Math.floor(billExpense * .06);
+      document.getElementById("fuelBenefit").innerHTML=fuelBenefit = Math.floor(((fuelExpense<6001)?(fuelExpense*.02):.02*6000));
+      document.getElementById("shoppingBenefit").innerHTML=shoppingBenefit = Math.floor(shoppingExpense * .17);
+      document.getElementById("airBenefit").innerHTML=airBenefit =Math.floor(((airTimes<4)?(airTimes*.1*6000):3*.1*6000));
+      document.getElementById("busBenefit").innerHTML=busBenefit = Math.floor(((busTimes<5)?(busTimes*.1*1500):4*.1*1500));
+      document.getElementById("onlineBenefit").innerHTML=onlineBenefit = Math.floor(onlineExpense*.08);
+      document.getElementById("movieBenefit").innerHTML=movieBenefit = Math.floor(((movieTimes<7)?(movieTimes*.2*250):6*.2*250));
+      document.getElementById("hotelBenefit").innerHTML=hotelBenefit = Math.floor(((hotelTimes<8)?(hotelTimes*.1*3500):7*.1*3500));
+      document.getElementById("electronicBenefit").innerHTML=electronicBenefit = Math.floor((((electronicExpense*.1)<1000)?(electronicExpense*.1):1000));
+      document.getElementById("groceryBenefit").innerHTML=groceryBenefit =   Math.floor(groceryExpense*.08);
+      document.getElementById("equipmentBenefit").innerHTML=equipmentBenefit = Math.floor((((equipmentExpense*.1)<300)?(equipmentExpense*.1):300));
+      document.getElementById("insuranceBenefit").innerHTML=insuranceBenefit = Math.floor(insuranceExpense*.06);
     }
+    if (levelValue == "level2") {
+      
+      document.getElementById("gymBenefit").innerHTML=gymBenefit = gymFitnessExpense * .08;
+      document.getElementById("cabBenefit").innerHTML=cabBenefit =((cabTimes<5)?(cabTimes*.15*300):4*.15*300);
+      document.getElementById("billBenefit").innerHTML=billBenefit = Math.floor(billExpense * .06);
+      document.getElementById("fuelBenefit").innerHTML=fuelBenefit = Math.floor(((fuelExpense<6001)?(fuelExpense*.02):.02*6000));
+      document.getElementById("shoppingBenefit").innerHTML=shoppingBenefit = Math.floor(shoppingExpense * .17);
+      document.getElementById("airBenefit").innerHTML=airBenefit =Math.floor(((airTimes<4)?(airTimes*.1*6000):3*.1*6000));
+      document.getElementById("busBenefit").innerHTML=busBenefit = Math.floor(((busTimes<5)?(busTimes*.1*1500):4*.1*1500));
+      document.getElementById("onlineBenefit").innerHTML=onlineBenefit = Math.floor(onlineExpense*.08);
+      document.getElementById("movieBenefit").innerHTML=movieBenefit = Math.floor(((movieTimes<7)?(movieTimes*.2*250):6*.2*250));
+      document.getElementById("hotelBenefit").innerHTML=hotelBenefit = Math.floor(((hotelTimes<8)?(hotelTimes*.1*3500):7*.1*3500));
+      document.getElementById("electronicBenefit").innerHTML=electronicBenefit = Math.floor((((electronicExpense*.1)<1000)?(electronicExpense*.1):1000));
+      document.getElementById("groceryBenefit").innerHTML=groceryBenefit =   Math.floor(groceryExpense*.08);
+      document.getElementById("equipmentBenefit").innerHTML=equipmentBenefit = Math.floor((((equipmentExpense*.1)<300)?(equipmentExpense*.1):300));
+      document.getElementById("insuranceBenefit").innerHTML=insuranceBenefit = Math.floor(insuranceExpense*.06);
+    }
+    document.getElementById("sumBenefit").innerHTML = "<b>"+(gymBenefit+cabBenefit+billBenefit+fuelBenefit+shoppingBenefit
+      +airBenefit+busBenefit+onlineBenefit+movieBenefit+hotelBenefit+electronicBenefit
+      +groceryBenefit+equipmentBenefit+insuranceBenefit)+"</b>";
+    
   }
   catch (err) {
     document.getElementById("errorMessage").innerHTML = err.message;
