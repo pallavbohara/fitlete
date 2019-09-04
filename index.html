@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Fitlete</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="form.validation.js"></script>
+  <!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="870956073546-a2r99tv519oqpe6kfk8n6cgq4r4o0svu.apps.googleusercontent.com"> -->
+</head>
+
+
+<body style="background: var(--primaryColorThree)">
+  <p id="errorMessage" style="color: white;display: none;"></p>
+  <div style="width: 100%">
+
+    <div style="margin: 0 auto; background-image: url(gymbackground.jpeg);max-width:  100vw;
+     height: 250px; width: 450px;">
+      <div style="width: 100%; height: 100%; background-color: #5e63e79c">
+        <div style="font-family: 'Montserrat';color: #ffffff; padding: 10%">
+          <h3>
+            <b>FITLETE</b>
+          </h3>
+          <br>
+          <h6>(1) Our Benefits</h6>
+          <h6>(2) How you get Benefits</h6>
+          <h6>(3) How many vender</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="centerwrapper">
+    <div class="tab row" style="padding-bottom: 20px;padding-top: 10px;">
+      <button onclick="openTab(event, 'SignUpTab')" class="tablinks buttonPurple">SIGN UP</button>
+      <button onclick="openTab(event, 'CalculateBenefitTab')" id="defaultOpen" class="tablinks buttonWhite">CALCULATE
+        BENEFITS</button>
+    </div>
+  </div>
+
+  <!-- Tab content -->
+  <div id="SignUpTab" class="tabcontent">
+    <div id="centerwrapper" style="min-height: var(--minTabContentHeight)">
+      <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+
+      <h3 class="btnSecondHead"><u>SIGN UP</u></h3>
+
+      <form name="RegForm" onsubmit="return FormValidationCheck()" method="post">
+        <input type="text" class="inputStyle" name="FirstName" placeholder="First Name">
+        <input class="inputStyle" type="text" name="LastName" placeholder="Last Name">
+        <br>
+        <input type="email" class="inputStyle" name="EMail" placeholder="Email Id">
+        <input class="inputStyle" type="number" name="Telephone" placeholder="Phone Number">
+        <br>
+        <input type="number" class="inputStyle" placeholder="Age">
+        <select name="gender" class="inputStyle">
+          <option value="" disabled selected>Gender</option>
+          <option value="volvo">Male</option>
+          <option value="saab">Female</option>
+          <option value="fiat">Rather not say</option>
+        </select>
+        <br>
+        <select name="city" class="inputStyle" placeholder="City">
+          <option value="" disabled selected>City</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Jaipur">Jaipur</option>
+        </select>
+        <select name="state" class="inputStyle" type="text" placeholder="State">
+          <option value="" disabled selected>State</option>
+          <option value="volvo">Rajasthan</option>
+          <option value="saab">Maharashtra</option>
+          <option value="fiat">West Bengal</option>
+          <option value="audi">Indian Union Territory</option>
+        </select>
+        <br>
+        <div class="input-container inputStyle">
+          <input type="password" name="Password" id="password"
+            style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Password">
+          <a onclick='show_hide_password_1(event)' class="fa fa-eye icon"></a>
+        </div>
+        <div class="input-container inputStyle">
+          <input type="password" name="CPassword" id="cpassword"
+            style="border: #5e63e700;width: 130px;background: #f0f0f0" placeholder="Confirm Password">
+          <a onclick='show_hide_password_2(event)' class="fa fa-eye icon"></a>
+        </div>
+
+        <br>
+
+        <input type="submit" value="SIGN UP" class="buttonSubmitSignIn">
+      </form>
+    </div>
+  </div>
+  <div id="CalculateBenefitTab" class="tabcontent">
+    <div id="centerwrapper" style="min-height: var(--minTabContentHeight);">
+      <h4 class="btnSecondHead"><u>CALCULATE BENEFITS</u></h4>
+      <div>
+        <table class="table" style="background-color:white;font-family: 'Montserrat'">
+          <thead style="background-color: var(--primaryColorOne); color: white;">
+            <tr>
+              <th>Let us know your average spends</th>
+              <th>
+                Your yearly savings with Multiply FLAGSHIP(RS.)
+                <select id="levels" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="level1">Level 1</option>
+                  <option value="level2">Level 2</option>
+                  <option value="level3">Level 3</option>
+                  <option value="level4">Level 4</option>
+                  <option value="level5">Level 5</option>
+                  <option value="level6">Level 6</option>
+                  <option value="level7">Level 7</option>
+                  <option value="level8">Level 8</option>
+                  <option value="level9">Level 9</option>
+                  <option value="level10">Level 10</option>
+                </select>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="icons/ic_treadmill.png" />
+                <p>Fitness center/Gym cost?</p>
+                <b>Rs.</b>
+                <select id="gymFitnessExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="1000">1000</option>
+                  <option value="1200">1200</option>
+                  <option value="1400">1400</option>
+                  <option value="1600">1600</option>
+                  <option value="1800">1800</option>
+                  <option value="2000">2000</option>
+                  <option value="2200">2200</option>
+                  <option value="2400">2400</option>
+                  <option value="2600">2600</option>
+                </select>
+              </td>
+              <td id="gymBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_frontal_taxi_cab.png" />
+                <p>How many cab rides do you take in a month?</p>
+                <select id="cabTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="8">>8</option>
+                </select>
+              </td>
+              <td id="cabBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_smartphone.png" />
+                <p>What does your monthly mobile recharge/bill come to?</p>
+                <b>Rs.</b>
+                <select id="billExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="100">100</option>
+                  <option value="200">200</option>
+                  <option value="300">300</option>
+                  <option value="400">400</option>
+                  <option value="500">500</option>
+                  <option value="600">600</option>
+                  <option value="700">700</option>
+                  <option value="800">800</option>
+                  <option value="900">900</option>
+                  <option value="1000">1000</option>
+                  <option value="1000">>1000</option>
+                </select>
+              </td>
+              <td id="billBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_fuel.png" />
+                <p>In a month how much you spend on fuel?</p>
+                <b>Rs.</b>
+                <select id="fuelExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="1000">1000</option>
+                  <option value="2000">2000</option>
+                  <option value="3000">3000</option>
+                  <option value="4000">4000</option>
+                  <option value="5000">5000</option>
+                  <option value="6000">6000</option>
+                  <option value="7000">7000</option>
+                  <option value="8000">8000</option>
+                  <option value="9000">9000</option>
+                  <option value="10000">10000</option>
+                  <option value=">10000">>10000</option>
+                </select>
+              </td>
+              <td id="fuelBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_shopping_bag.png" />
+                <p>What is your monthly spend on online shopping(Apparelware)?</p>
+                <b>Rs.</b>
+                <select id="shoppingExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="2000">2000</option>
+                  <option value="4000">4000</option>
+                  <option value="6000">6000</option>
+                  <option value="8000">8000</option>
+                  <option value="10000">10000</option>
+                  <option value="12000">12000</option>
+                  <option value="12000">>12000</option>
+                </select>
+              </td>
+              <td id="shoppingBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_travel.png" />
+                <p>How many air trips do you take in a year?</p>
+                <select id="airTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value=">8">>8</option>
+                </select>
+              </td>
+              <td id="airBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_bus_side_view.png" />
+                <p>How many long distance bus trips do you have in a year?</p>
+                <select id="busTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="15">>15</option>
+                </select>
+              </td>
+              <td id="busBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_teacher.png" />
+                <p>Online Classes/Services?</p>
+                <b>Rs.</b>
+                <select id="onlineExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="2000">2000</option>
+                  <option value="4000">4000</option>
+                  <option value="6000">6000</option>
+                  <option value="8000">8000</option>
+                  <option value="10000">10000</option>
+                  <option value="12000">12000</option>
+                  <option value="12000">>12000</option>
+                </select>
+              </td>
+              <td id="onlineBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_movies.png" />
+                <p>How many times a year do you go for movies?</p>
+                <select id="movieTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value=">12">>12</option>
+                </select>
+              </td>
+              <td id="movieBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_hotel.png" />
+                <p>How many days of hotel stay do you have in a year?</p>
+                <select id="hotelTimes" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value=">15">>15</option>
+                </select>
+              </td>
+              <td id="hotelBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_joystick.png" />
+                <p>How much do you spend on electronic devices in a year?</p>
+                <b>Rs.</b>
+                <select id="electronicExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="10000">10000</option>
+                  <option value="20000">20000</option>
+                  <option value="30000">30000</option>
+                  <option value="40000">40000</option>
+                  <option value="50000">50000</option>
+                  <option value="50000">>50000</option>
+                </select>
+              </td>
+              <td id="electronicBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_grocery.png" />
+                <p>What is your average monthly grocery bill?</p>
+                <b>Rs.</b>
+                <select id="groceryExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="3000">3000</option>
+                  <option value="4000">4000</option>
+                  <option value="5000">5000</option>
+                  <option value="6000">6000</option>
+                  <option value="7000">7000</option>
+                  <option value="8000">8000</option>
+                  <option value="9000">9000</option>
+                  <option value="10000">10000</option>
+                  <option value="10000">>10000</option>
+                </select>
+              </td>
+              <td id="groceryBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_fitness.png" />
+                <p>Fitness Equipment and Consumables</p>
+                <b>Rs.</b>
+                <select id="equipmentExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="3000">3000</option>
+                  <option value="4000">4000</option>
+                  <option value="5000">5000</option>
+                  <option value="6000">6000</option>
+                  <option value="7000">7000</option>
+                  <option value="8000">8000</option>
+                  <option value="9000">9000</option>
+                  <option value="10000">10000</option>
+                  <option value="11000">11000</option>
+                  <option value="12000">12000</option>
+                  <option value="13000">13000</option>
+                  <option value="14000">14000</option>
+                  <option value="15000">15000</option>
+                  <option value="15000">>15000</option>
+                </select>
+              </td>
+              <td id="equipmentBenefit">0</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="icons/ic_doctor.png" />
+                <p>Expense on Family Health Insurance Premium(4 people)</p>
+                <b>Rs.</b>
+                <select id="insuranceExpense" style="margin: 5px" onchange="ReCalculateForAllFields()">
+                  <option value="25000">25000</option>
+                  <option value="30000">30000</option>
+                  <option value="35000">35000</option>
+                  <option value="40000">40000</option>
+                  <option value="45000">45000</option>
+                  <option value="50000">50000</option>
+                  <option value="50000">>50000</option>
+                </select>
+              </td>
+              <td id="insuranceBenefit">0</td>
+            </tr>
+            <tr>
+              <td style="background-color: var(--primaryColorOne); color: white; ">Sum</td>
+              <td id="sumBenefit">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div
+    style="display: flex; position: relative; background:  rgba(190, 190, 190, 0.925); margin-top: 20px;padding-bottom: 5px">
+    <i class="contactNsupport">Contact and support</i>
+  </div>
+  <div style="width: 100%;text-align: center;">
+    <div>
+      <img class="bottom-icons" src="icon_facebook.png" />
+      <img class="bottom-icons" src="icon_instagram.png" />
+      <img class="bottom-icons" src="icon_twitter.png" />
+    </div>
+  </div>
+  <script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    document.addEventListener('DOMContentLoaded', function() {
+      ReCalculateForAllFields();
+   // your code here
+}, false);
+  </script>
+</body>
+
+</html>
